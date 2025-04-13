@@ -1,0 +1,23 @@
+services:
+  microsip-addressbook:
+    container_name: microsip-addressbook
+    init: true
+    build: .    
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+    env_file:
+      - .env
+  nginx:
+    image: nginx
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+    - '65000:80'
+    volumes:
+    - ./data:/data
+    - ./default.conf:/etc/nginx/conf.d/default.conf
+
+networks:
+  default:
+    name: microsip-addressbook

@@ -31,9 +31,8 @@ Generates MicroSIP phone address book from Active Directory. Built with Python a
     ```
 
 ## MicroSIP Configuration
-1. Open **Settings** → **Advanced**
-2. Set **Address book URL**:
+1. Open **Settings**
+2. Set **Directory of users**:
     ```
-    http://your-server-ip:65000/phonebook.xml
+    http://your-server-ip:65000
     ```
-3. Enable **Use address book**
